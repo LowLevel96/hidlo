@@ -1,0 +1,1 @@
+int* imageData(char *filename);

@@ -1,0 +1,63 @@
+# Project: ProjectBMP
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o getLine.o imageData.o fMirror.o fGray.o writeImageData.o fBrightness.o fSaltAndPaper.o fBinary.o fAlphaBlend.o fGreenReplace.o getBGR.o $(RES)
+LINKOBJ  = main.o getLine.o imageData.o fMirror.o fGray.o writeImageData.o fBrightness.o fSaltAndPaper.o fBinary.o fAlphaBlend.o fGreenReplace.o getBGR.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = ProjectBMP.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ProjectBMP.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "ProjectBMP.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+getLine.o: getLine.c
+	$(CC) -c getLine.c -o getLine.o $(CFLAGS)
+
+imageData.o: imageData.c
+	$(CC) -c imageData.c -o imageData.o $(CFLAGS)
+
+fMirror.o: fMirror.c
+	$(CC) -c fMirror.c -o fMirror.o $(CFLAGS)
+
+fGray.o: fGray.c
+	$(CC) -c fGray.c -o fGray.o $(CFLAGS)
+
+writeImageData.o: writeImageData.c
+	$(CC) -c writeImageData.c -o writeImageData.o $(CFLAGS)
+
+fBrightness.o: fBrightness.c
+	$(CC) -c fBrightness.c -o fBrightness.o $(CFLAGS)
+
+fSaltAndPaper.o: fSaltAndPaper.c
+	$(CC) -c fSaltAndPaper.c -o fSaltAndPaper.o $(CFLAGS)
+
+fBinary.o: fBinary.c
+	$(CC) -c fBinary.c -o fBinary.o $(CFLAGS)
+
+fAlphaBlend.o: fAlphaBlend.c
+	$(CC) -c fAlphaBlend.c -o fAlphaBlend.o $(CFLAGS)
+
+fGreenReplace.o: fGreenReplace.c
+	$(CC) -c fGreenReplace.c -o fGreenReplace.o $(CFLAGS)
+
+getBGR.o: getBGR.c
+	$(CC) -c getBGR.c -o getBGR.o $(CFLAGS)
